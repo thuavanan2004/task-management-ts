@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken";
 
-export const generateAccessToken = (userId: string | number): string => {
+export const generateAccessToken = (userId: string): string => {
   try {
     const secret = process.env.ACCESS_TOKEN_SECRET;
     if (!secret) {
@@ -17,7 +17,7 @@ export const generateAccessToken = (userId: string | number): string => {
   }
 };
 
-export const generateRefreshToken = (userId: string | number): string => {
+export const generateRefreshToken = (userId: string): string => {
   try {
     const secret = process.env.REFRESH_TOKEN_SECRET;
     if (!secret) {

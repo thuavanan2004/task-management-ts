@@ -7,6 +7,8 @@ router.post("/register", controller.register);
 
 router.post("/login", controller.login);
 
-router.post("/token", controller.refreshAccessToken);
+router.post("/refresh-token", controller.refreshToken);
+
+router.get("/logout", controller.logout);
 
 export const userRouters: Router = router;
